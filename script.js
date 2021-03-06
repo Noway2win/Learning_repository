@@ -50,8 +50,8 @@ function detectPersonalLevel() {
 
 detectPersonalLevel();
 
-function showMyDB(personalMovieDB) {
-    if (personalMovieDB.privat == false) {
+function showMyDB(privat) {
+    if (privat == false) {
         console.log(personalMovieDB);
     } else {
         console.log('Protected');
@@ -61,9 +61,9 @@ function showMyDB(personalMovieDB) {
 writeYourGenres();
 
 function writeYourGenres() {
-    for (let i = 0; i < 3; i++) {
-        let genre = prompt(`Ваш любимый жанр под номером${i}?`, '')
+    for (let i = 1; i <= 3; i++) {
+        let genre = prompt(`Ваш любимый жанр под номером${i}?`, '');
         personalMovieDB.genres.push(genre);
     }
 }
-showMyDB(personalMovieDB);
+showMyDB(personalMovieDB.privat);
