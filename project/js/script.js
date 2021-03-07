@@ -20,7 +20,8 @@ const movieDB = {
         "Лига справедливости",
         "Ла-ла лэнд",
         "Одержимость",
-        "Скотт Пилигрим против..."
+        "Скотт Пилигрим против...",
+        "Еще по одной",
     ]
 };
 // Первое задание
@@ -47,11 +48,12 @@ promoBg.style.background = 'url(./img/bg.jpg) center center/cover no-repeat';
 
 const promoInteractive = promoContent.querySelector('.promo__interactive');
 let promoInteractiveList = promoInteractive.querySelector('.promo__interactive-list');
+promoInteractiveList.innerHTML = '';
 
 const sortedMovies = movieDB.movies.sort();
 console.log(sortedMovies);
 sortedMovies.forEach((item, i) => {
-    promoInteractiveList.insertAdjacentHTML('beforeend', `<li class="promo__interactive-item">${i++}. ${item}
+    promoInteractiveList.insertAdjacentHTML('beforeend', `<li class="promo__interactive-item">${++i}. ${item}
         <div class="delete"></div>
     </li>`);
 });
