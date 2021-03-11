@@ -4,7 +4,9 @@ window.addEventListener('DOMContentLoaded', function () {
     const timerForm = document.querySelector('.timer_form-form'),
         formHours = timerForm.querySelector('#hours2'),
         formMinutes = timerForm.querySelector('#minutes2'),
-        formSeconds = timerForm.querySelector('#seconds2');
+        formSeconds = timerForm.querySelector('#seconds2'),
+        modalWindow = document.querySelector('.timer-modal'),
+        modalCloseBtn = modalWindow.querySelector('.timer-modal-close');
     let totalTime = 0;
     timerForm.addEventListener('submit', (e) => {
         e.preventDefault();
@@ -53,8 +55,14 @@ window.addEventListener('DOMContentLoaded', function () {
             hours.innerText = timeLeft.hours;
             minutes.innerText = timeLeft.minutes;
             seconds.innerText = timeLeft.seconds;
-            if (t.total <= 0) {
+            if (timeLeft.total <= 0) {
                 clearInterval(timeInterval);
+                modalWindow.classList.remove('timer-modal-hidden');
+                modalWindow.classList.add('timer-modal-visible');
+                modalCloseBtn.addEventListener('click', () => {
+                    modalWindow.classList.remove('timer-modal-visible');
+                    modalWindow.classList.add('timer-modal-hidden');
+                });
             }
         }
     }

@@ -494,6 +494,61 @@ template {
   justify-content: space-around;
 }
 
+.timer-modal {
+  box-sizing: border-box;
+  position: fixed;
+  width: 80%;
+  height: 60vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #e410ff;
+  background: radial-gradient(circle, rgba(228, 16, 255, 0.899597) 23%, #ffa0a0 66%);
+  border-radius: 15px;
+}
+
+.timer-modal-visible {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.timer-modal-hidden {
+  display: none;
+}
+
+.timer-modal-head {
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-style: italic;
+  font-size: 60px;
+}
+
+.timer-modal-close {
+  align-self: center;
+  text-decoration: none;
+  display: block;
+  padding: 15px 30px;
+  margin: 0 0;
+  border-radius: 10px;
+  box-shadow: 0 0 40px 40px #F137A6 inset, 0 0 0 0 #F137A6;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: white;
+  transition: .15s ease-in-out;
+  position: fixed;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -120%);
+}
+
+.timer-modal-close:hover {
+  box-shadow: 0 0 10px 0 #F137A6 inset, 0 0 10px 4px #F137A6;
+  color: black;
+}
+
 .timer {
   background-color: black;
   width: 333px;
