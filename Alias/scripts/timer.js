@@ -6,7 +6,25 @@ window.addEventListener('DOMContentLoaded', function () {
         formMinutes = timerForm.querySelector('#minutes2'),
         formSeconds = timerForm.querySelector('#seconds2'),
         modalWindow = document.querySelector('.timer-modal'),
+        modalBlur = document.querySelector('#blur'),
         modalCloseBtn = modalWindow.querySelector('.timer-modal-close');
+
+    const closeModal = (e) => {
+        if (e.target != modalWindow) {
+            modalWindow.classList.remove('timer-modal-visible');
+            modalWindow.classList.add('timer-modal-hidden');
+            modalBlur.classList.remove('blur');
+            console.log('i am here');
+            if (modalWindow.classList.contains('timer-modal-hidden')) {
+                window.removeEventListener('click', closeModal);
+            }
+        }
+    };
+
+    if (modalWindow.classList.contains('timer-modal-hidden')) {
+        window.removeEventListener('click', closeModal);
+    }
+
     let totalTime = 0;
     timerForm.addEventListener('submit', (e) => {
         e.preventDefault();
@@ -59,9 +77,14 @@ window.addEventListener('DOMContentLoaded', function () {
                 clearInterval(timeInterval);
                 modalWindow.classList.remove('timer-modal-hidden');
                 modalWindow.classList.add('timer-modal-visible');
+                modalBlur.classList.add('blur');
+
+
+                window.addEventListener('click', closeModal);
                 modalCloseBtn.addEventListener('click', () => {
                     modalWindow.classList.remove('timer-modal-visible');
                     modalWindow.classList.add('timer-modal-hidden');
+                    modalBlur.classList.remove('blur');
                 });
             }
         }
