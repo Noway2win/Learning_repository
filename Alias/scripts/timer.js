@@ -29,6 +29,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
         function updateTimer() {
             const timeLeft = getTimerValues(endTime);
+            endTime -= 1000;
             hours.innerText = timeLeft.hours;
             minutes.innerText = timeLeft.minutes;
             seconds.innerText = timeLeft.seconds;
