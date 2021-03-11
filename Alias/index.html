@@ -66,18 +66,26 @@
       <section class="timer-section">
         <div class="timer">
           <div class="timer_item">
-            <div class="timer_item-count"><span id="hours"></span></div>
+            <div class="timer_item-count"><span id="hours">0</span></div>
             <div class="timer_item-unit">Часов</div>
           </div>
           <div class="timer_item">
-            <div class="timer_item-count"><span id="minutes"></span></div>
+            <div class="timer_item-count"><span id="minutes">0</span></div>
             <div class="timer_item-unit">Минут</div>
           </div>
           <div class="timer_item">
-            <div class="timer_item-count"><span id="seconds"></span></div>
+            <div class="timer_item-count"><span id="seconds">0</span></div>
             <div class="timer_item-unit">Секунд</div>
           </div>
         </div>
+      </section>
+      <section class="timer_form">
+        <form class="timer_form-form">
+          <input id="hours2" type="text" placeholder="Часы" />
+          <input id="minutes2" type="text" placeholder="Минуты" />
+          <input id="seconds2" type="text" placeholder="Секунды" />
+          <button type="submit">Начать отсчет</button>
+        </form>
       </section>
     </main>
     <footer class="footer">Создано в качестве тестового проекта</footer>

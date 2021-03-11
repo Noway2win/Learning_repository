@@ -530,6 +530,64 @@ template {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+.timer_form {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 50px;
+}
+
+.timer_form > form {
+  width: 330px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3px;
+}
+
+.timer_form > form > input {
+  width: 75px;
+  border-radius: 15px;
+}
+
+.timer_form > form > button {
+  width: 75px;
+  align-self: center;
+  text-decoration: none;
+  display: block;
+  padding: 15px 30px;
+  margin: 0 0;
+  border-radius: 10px;
+  box-shadow: 0 0 40px 40px #F137A6 inset, 0 0 0 0 #F137A6;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: white;
+  transition: .15s ease-in-out;
+  text-align: center;
+  font-size: 10px;
+  padding: 0;
+}
+
+.timer_form > form > button:hover {
+  box-shadow: 0 0 10px 0 #F137A6 inset, 0 0 10px 4px #F137A6;
+  color: black;
+}
+
+#hours {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+#minutes {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+#seconds {
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+
 body {
   height: 100vh;
   display: grid;

@@ -1,8 +1,28 @@
 window.addEventListener('DOMContentLoaded', function () {
-    const startTime = new Date();
-    let endTime = new Date((startTime.getTime() + 7300000));
-    let t = endTime.getTime() - startTime.getTime();
-    console.log(t);
+    // const startTime = new Date();
+    let t;
+    const timerForm = document.querySelector('.timer_form-form'),
+        formHours = timerForm.querySelector('#hours2'),
+        formMinutes = timerForm.querySelector('#minutes2'),
+        formSeconds = timerForm.querySelector('#seconds2');
+    let totalTime = 0;
+    timerForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        let hours = +formHours.value,
+            minutes = +formMinutes.value,
+            seconds = +formSeconds.value;
+        if (!isNaN(hours) && !isNaN(minutes) && !isNaN(seconds)) {
+            totalTime = hours * 3600000 + minutes * 60000 + seconds * 1000;
+            const startTime = new Date();
+            let endTime = new Date((startTime.getTime() + totalTime));
+            t = endTime.getTime() - startTime.getTime();
+        } else {
+            alert('Введите числа');
+        }
+        timerForm.reset();
+        getTimerValues(t);
+        setTimer('.timer', t);
+    });
 
     function getTimerValues(time) {
         let total = time;
@@ -17,7 +37,7 @@ window.addEventListener('DOMContentLoaded', function () {
             seconds,
         };
     }
-    getTimerValues(t);
+
 
     function setTimer(selector, endTime) {
         const htmlTimer = document.querySelector(selector),
@@ -38,5 +58,5 @@ window.addEventListener('DOMContentLoaded', function () {
             }
         }
     }
-    setTimer('.timer', t);
+
 });
