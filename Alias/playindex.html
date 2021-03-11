@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/index.css" />
+    <title>Add teams</title>
+  </head>
+  <body>
+    <div class="addteam">
+      <div class="addteam_menu">
+        <h1 class="addteam_menu_header">Введите свои команды(до 4 штук)</h1>
+        <div class="addteam_menu_items">
+          <div class="addteam_menu_items-item" data-number="1">
+            <p>
+              Команда 1<button class="addteam_menu_items-item-remove">X</button>
+            </p>
+          </div>
+        </div>
+        <form type="submit" action="#" class="form_add">
+          <input
+            type="text"
+            maxlength="20"
+            placeholder="Введите название команды"
+          />
+          <button class="form_add-btn">Добавить команду</button>
+        </form>
+        <a href="#" class="start_game">Начать игру</a>
+      </div>
+    </div>
+    <script defer src="./scripts/addTeamScript.js"></script>
+  </body>
+</html>

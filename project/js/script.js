@@ -86,12 +86,12 @@ P.S. Здесь есть несколько вариантов решения з
 
 5) Фильмы должны быть отсортированы по алфавиту */
 
-// Урок 2 задание 1
+// Урок 2
 
 const addForm = document.querySelector('.add');
 let delBtn = document.querySelectorAll('.delete');
 
-
+// Функция удаления фильма из списка
 function deleteMovie(btn) {
     delBtn.forEach((item) => {
         item.addEventListener('click', () => {
@@ -107,7 +107,7 @@ function deleteMovie(btn) {
 deleteMovie(delBtn);
 
 
-
+// функция добавления фильма в список
 function pushNewMovie(movie, favourite) {
     if (favourite) {
         alert('Добавили любимый фильм');

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/index.css" />
+    <script defer src="./scripts/aliasScript.js"></script>
+    <title>Alias</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1>Alias</h1>
+    </header>
+    <main class="main">
+      <section class="rules">
+        <h2 class="rules_head">Правила игры</h2>
+        <div class="rules_body">
+          <div class="rules_body__content">
+            <div class="rules_body__content-item active">
+              ALIAS - игра разъяснения слов, в которой принимают участие
+              команды, состоящие из двух человек. Минимальное количество игроков
+              4 человека, максимальному предела нет. В игре ALIAS надо суметь
+              объяснить другими словами разгадываемое слово. То есть задачей
+              является, с определёнными ограничениями!! и с помощью объяснении,
+              синонимов, антонимов и намёков, достичь того, чтобы компаньоны по
+              игре отгадали как можно больше указанных в карточке слов. Команда,
+              которая подойдёт к финишу первой, становится победителем. ALIAS
+              предлагает самый веселый в мире способ для упражнения иностранным
+              языком, если игроки договорятся о ведении игры на английском,
+              немецком или каком-то другом языке.
+            </div>
+            <div class="rules_body__content-item hidden">
+              Ход игры Карточки со словами перемешиваются и складываются в
+              ячейки коробки. Последнюю карточку каждой колоды переворачивают.
+              Это делается для того, чтобы в свое время увидеть, что вся колода
+              сыграна и после этого перемешать колоду снова. Очередность ведения
+              игры разыгрывается игроками. Команда, которая начинает игру,
+              договаривается между собой, кто из членов команды объясняет, а
+              кторазгадывает. Разъясняющий берет определенное количество
+              карточек в руки (15-20 шт.), а остальные члены команды задают ему
+              какой-либо номер от 1 до 8, (номер слова на карточке), например 4.
+              (См. Правила касающиеся разъяснений). После каждого правильно
+              отгаданного слова он кладет эту карточку на стол и начинает
+              разъяснять слово под номером 4 со следующей карточки. Когда песок
+              в песочных часах стечёт вниз, остальные команды кричат "пиип".
+            </div>
+            <div class="rules_body__content-item hidden">
+              Минусовые шаги за ошибки Если разъясняющий сделает ошибку в своем
+              разъяснении, то ответ не зачитывается и команда получает за это
+              штраф в виде одного минусового шага.
+            </div>
+          </div>
+          <div class="rules_body__nav">
+            <div class="rules_body__nav-btn rules_body__nav-btn_active">
+              Шаг 1
+            </div>
+            <div class="rules_body__nav-btn">Шаг 2</div>
+            <div class="rules_body__nav-btn">Шаг 3</div>
+          </div>
+        </div>
+      </section>
+      <div class="play">
+        <a href="./playindex.html" class="playBtn">Играть</a>
+      </div>
+      <section class="timer-section">
+        <div class="timer">
+          <div class="timer_item">
+            <div class="timer_item-count"><span id="hours"></span></div>
+            <div class="timer_item-unit">Часов</div>
+          </div>
+          <div class="timer_item">
+            <div class="timer_item-count"><span id="minutes"></span></div>
+            <div class="timer_item-unit">Минут</div>
+          </div>
+          <div class="timer_item">
+            <div class="timer_item-count"><span id="seconds"></span></div>
+            <div class="timer_item-unit">Секунд</div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">Создано в качестве тестового проекта</footer>
+    <script src="./scripts/timer.js"></script>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+@import "./utils/index.scss";
+@import "./components/index.scss";
+body{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 50px;
+    background: rgb(230,151,240);
+    background: linear-gradient(90deg, rgba(230,151,240,1) 19%, rgba(255,0,0,1) 79%);
+}
+.main{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}

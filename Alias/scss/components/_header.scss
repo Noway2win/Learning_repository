@@ -1,0 +1,16 @@
+.header{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(255,0,0,1) 0%, rgba(230,151,240,1) 85%);
+    > h1{
+        @include h1();
+    }
+    &::before{
+        content: '\2190';
+        position: absolute;
+        font-size: 25px;
+        color: white;
+        top:-2px;
+        left: 25px;
+        background-color: transparent;
+    }
+}

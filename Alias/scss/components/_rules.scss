@@ -1,0 +1,64 @@
+.rules{
+    padding: 15px;
+    height: 250px;
+    &_head{
+        @include h1();
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    &_body{
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        gap: 5px;
+        height: 200px;
+        border: 1px solid black;
+        border-radius: 15px;
+        &__content{
+            padding: 15px 3px 3px 15px;
+        &-item{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 15px;
+            padding: 10px 0 10px 0;
+        }
+    }
+    &__nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        border: 1px solid black;
+        border-radius: 15px;
+        &-btn{
+            cursor: pointer;
+            width: 90%;
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 15px;
+            padding: 5px;
+            border: 1px solid black;
+            border-radius: 10px;
+            &_active{
+                font-weight: 800;
+            }
+        }
+    }
+    }
+    
+}
+.active{
+    display: block;
+    animation: text-focus-in 1s linear both;
+}
+.hidden{
+    display: none;
+}
+@keyframes text-focus-in {
+    0% {
+      filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      filter: blur(0px);
+      opacity: 1;
+    }
+  }

@@ -1,0 +1,25 @@
+@mixin h1(){
+    margin: 0;
+    font-size: 24px;
+    color: black;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+}
+@mixin btn($marginX: 0, $marginY:0){
+        align-self: center;
+        text-decoration: none;
+        display: block;
+        padding: 15px 30px;
+        margin: $marginY $marginX;
+        border-radius: 10px;
+        box-shadow: 0 0 40px 40px #F137A6 inset, 0 0 0 0 #F137A6;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        letter-spacing: 2px;
+        color: white;
+        transition: .15s ease-in-out;
+        &:hover {
+            box-shadow: 0 0 10px 0 #F137A6 inset, 0 0 10px 4px #F137A6;
+            color: black;
+          }
+}
